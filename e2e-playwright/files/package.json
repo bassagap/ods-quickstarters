@@ -1,0 +1,31 @@
+{
+  "name": "awesome-web-testing-playwright",
+  "version": "1.0.0",
+  "description": "This repository contains the [Automation Panda](https://automationpanda.com/)'s official Playwright tutorial!",
+  "main": "index.js",
+  "scripts": {
+    "ci:test": "CI=true npm run test:installation && CI=true npm run test:acceptance",
+    "lint": "tsc --noEmit && eslint .",
+    "lint:fix": "npm run lint -- --fix",
+    "prepare": "husky install && playwright install",
+    "repair": "npx --yes rimraf .git/hooks build node_modules playwright-report test-results package-lock.json && npm install",
+    "test": "playwright test",
+    "test:acceptance": "playwright test --config playwright-acceptance.config.ts",
+    "test:installation": "playwright test --config playwright-installation.config.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AutomationPanda/awesome-web-testing-playwright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AutomationPanda/awesome-web-testing-playwright/issues"
+  },
+  "homepage": "https://github.com/AutomationPanda/awesome-web-testing-playwright#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.39.0",
+    "@types/node": "^20.9.0"
+  }
+}
